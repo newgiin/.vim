@@ -1,21 +1,31 @@
 set nocompatible
+colorscheme delek
+set hlsearch
+set tabstop=4 shiftwidth=4 expandtab
+set nobackup
+set nowritebackup
+" Always show tab name
+set showtabline=2
+
+nmap <c-w> :exit<CR>
+nmap <c-n> :tabnew 
+nmap <c-l> gt
+nmap <c-h> gT
 
 syntax enable
-colorscheme sublime
-set guifont=Consolas:h11:cANSI
-
-set nobackup
-
-set ignorecase " ignore case for search
-set smartcase  " ignore case if search is all lowercase, case-senstitive otherwise
+if has("gui_running")
+  if has("gui_gtk2")
+    set cursorline
+    colorscheme sublime
+    " # To install Inconsolata:
+    " sudo apt-get install ttf-inconsolata
+    " sudo fc-cache -fv
+    set guifont=Inconsolata\ 13
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
 
 set nu
-set cursorline
-set hlsearch
-
-set tabstop=4
-set shiftwidth=4
 set shiftround
-set expandtab
-set autoindent
-set smartindent
+set autoindent smartindent

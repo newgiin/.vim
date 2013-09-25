@@ -14,9 +14,9 @@ nmap <c-h> gT
 
 syntax enable
 if has("gui_running")
+  set cursorline
+  colorscheme sublime
   if has("gui_gtk2")
-    set cursorline
-    colorscheme sublime
     " # To install Inconsolata:
     " sudo apt-get install ttf-inconsolata
     " sudo fc-cache -fv

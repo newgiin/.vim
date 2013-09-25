@@ -87,7 +87,7 @@ hi RedR    guifg=fg guibg=#F92672 gui=none
 hi YellowR guifg=bg guibg=#FD971F gui=none
 
 
-" Syntax highligh groups
+" Syntax highlight groups
 hi! link Comment      Grey
 "
 hi! link Constant     Yellow
@@ -119,7 +119,7 @@ hi! link StorageClass Cyan
 "hi Structure
 "hi Typedef
 "
-hi! link Special      Grey
+hi! link Special      White
 "hi SpecialChar
 hi! link Tag          Green
 "hi Delimiter

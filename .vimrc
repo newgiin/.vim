@@ -2,6 +2,7 @@ set nocompatible
 colorscheme delek
 set hlsearch
 set tabstop=4 shiftwidth=4 expandtab
+set autoindent smartindent
 set nobackup
 set nowritebackup
 " Always show tab name
@@ -28,10 +29,9 @@ endif
 
 set nu
 set shiftround
-set autoindent smartindent
 
 "====[ Make the 81st column stand out ]===================="
-highlight ColorColumn ctermbg=magenta
+highlight ColorColumn ctermbg=red
 " EITHER the entire 81st column, full-screen...
 "set colorcolumn=81
 " OR ELSE just the 81st column of wide lines...
@@ -51,3 +51,7 @@ function! HLNext (blinktime)
     set invcursorline
     redraw
 endfunction
+
+" Highlight extra whitespace.
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$\|\t/

@@ -1,21 +1,28 @@
 set nocompatible
-colorscheme delek
 set hlsearch
-set tabstop=4 shiftwidth=4 expandtab
+set tabstop=2 shiftwidth=2 expandtab
+set autoindent smartindent
 set nobackup
 set nowritebackup
 " Always show tab name
 set showtabline=2
 
 nmap <c-w> :exit<CR>
-nmap <c-n> :tabnew 
+nmap <c-n> :tabnew
 nmap <c-l> gt
 nmap <c-h> gT
 
 syntax enable
+" colorscheme delek
+set background=dark
+colorscheme solarized
+" Fix for the text background being different from the
+" non-text background with colorscheme solarized.
+hi Normal ctermbg=None
+
 if has("gui_running")
   set cursorline
-  colorscheme sublime
+  "colorscheme sublime
   if has("gui_gtk2")
     " # To install Inconsolata:
     " sudo apt-get install ttf-inconsolata
@@ -28,10 +35,9 @@ endif
 
 set nu
 set shiftround
-set autoindent smartindent
 
 "====[ Make the 81st column stand out ]===================="
-highlight ColorColumn ctermbg=magenta
+highlight ColorColumn ctermbg=red
 " EITHER the entire 81st column, full-screen...
 "set colorcolumn=81
 " OR ELSE just the 81st column of wide lines...
@@ -51,3 +57,5 @@ function! HLNext (blinktime)
     set invcursorline
     redraw
 endfunction
+
+highlight ShowTrailingWhitespace ctermbg=Red guibg=Red

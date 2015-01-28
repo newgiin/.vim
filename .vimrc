@@ -58,4 +58,6 @@ function! HLNext (blinktime)
     redraw
 endfunction
 
-highlight ShowTrailingWhitespace ctermbg=Red guibg=Red
+" Highlight extra whitespace.
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$\|\t/
